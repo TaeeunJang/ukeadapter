@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:ignore="SpUsage,HardcodedText,RtlHardcoded">
+
+    <data>
+        <variable name="viewModel" type="com.cooper.center.ukeadapter.sample.Card2ViewModel"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="#ffffff">
+
+        <ImageView
+                android:id="@+id/icon_image_view"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icon_image_view"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@{viewModel.textColor}"
+                    android:textSize="20dp"
+                    android:text="@{viewModel.text}"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@{viewModel.descriptionColor}"
+                    android:textSize="20dp"
+                    android:text="@{viewModel.description}"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>
