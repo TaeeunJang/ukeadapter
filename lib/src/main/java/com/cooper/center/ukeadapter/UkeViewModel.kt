@@ -44,23 +44,23 @@ abstract class UkeViewModel<Model> {
         return pipe.path()
     }
 
-    fun onCreate() {
+    open fun onCreate() {
 
     }
 
-    fun onAttach() {
+    open fun onAttach() {
 
     }
 
-    fun onDetach() {
+    open fun onDetach() {
 
     }
 
-    fun onBind() {
+    open fun onBind() {
 
     }
 
-    fun onUnbind() {
+    open fun onUnbind() {
 
     }
 
