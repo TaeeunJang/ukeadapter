@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
 
@@ -10,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 100
+        versionName "1.0.0"
     }
 
     buildTypes {
@@ -44,3 +45,14 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
+
+//publish {
+//    userOrg = 'cooperbakker'
+//    groupId = 'com.cooper.center'
+//    artifactId = 'ukeadapter'
+//    publishVersion = '1.0.0'
+//    desc = 'UkeAdapter for Android RecyclerView'
+//    website = 'https://github.com/TaeeunJang/ukeadapter'
+//    issueTracker = "${website}/issues"
+//    repository = "${website}.git"
+//}
