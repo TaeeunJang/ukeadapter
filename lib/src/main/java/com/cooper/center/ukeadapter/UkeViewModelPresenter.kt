@@ -19,6 +19,14 @@ class UkeViewModelPresenter(
             viewModel
         )
 
+        holder.itemView.setOnFocusChangeListener { _, focused ->
+            if (focused) {
+                viewModel.onFocus()
+            } else {
+                viewModel.onUnfocus()
+            }
+        }
+
         viewModel.onCreate()
 
         return holder

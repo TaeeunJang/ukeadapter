@@ -64,4 +64,12 @@ abstract class UkeViewModel<Model> {
 
     }
 
+    open fun onFocus() {
+
+    }
+
+    open fun onUnfocus() {
+
+    }
+
 }
