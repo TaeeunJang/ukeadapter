@@ -315,4 +315,12 @@ class UkeAdapter : RecyclerView.Adapter<UkeHolder>(), MutableList<Any> {
         throw FailedToFindViewType(`object`, position)
     }
 
+    fun event() : UkeEvent {
+        return event
+    }
+
+    fun pipe() : UkePipe {
+        return pipe
+    }
+
 }
