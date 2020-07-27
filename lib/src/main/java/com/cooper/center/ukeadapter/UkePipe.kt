@@ -1,5 +1,6 @@
 package com.cooper.center.ukeadapter
 
+import java.lang.Exception
 import java.util.HashMap
 
 class UkePipe internal constructor() {
@@ -19,12 +20,16 @@ class UkePipe internal constructor() {
     @Suppress("UNCHECKED_CAST")
     fun <T> get(key: String, clz: Class<T>): T? {
         val obj = map[key]
-        return if (obj == null || !clz.isAssignableFrom(obj.javaClass)) {
-            if (connectedPipe != null)
-                connectedPipe!!.get(key, clz)
-            else
-                null
-        } else obj as T?
+        return try {
+            if (obj == null) {
+                if (connectedPipe != null)
+                    connectedPipe!!.get(key, clz)
+                else
+                    null
+            } else obj as T?
+        } catch (exception: Exception) {
+            null
+        }
     }
 
     fun name(name: String) {

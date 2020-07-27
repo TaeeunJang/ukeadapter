@@ -12,7 +12,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 101
-        versionName "1.0.3"
+        versionName "1.0.4"
     }
 
     buildTypes {
@@ -50,7 +50,7 @@ publish {
     userOrg = 'cooperbakker'
     groupId = 'com.cooper.center'
     artifactId = 'ukeadapter'
-    publishVersion = '1.0.3'
+    publishVersion = '1.0.4'
     desc = 'UkeAdapter for Android RecyclerView'
     website = 'https://github.com/TaeeunJang/ukeadapter'
     issueTracker = "${website}/issues"
