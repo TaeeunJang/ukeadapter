@@ -80,7 +80,7 @@ class UkeAdapter : RecyclerView.Adapter<UkeHolder>(), MutableList<Any> {
         }
 
         fun connect(pipe: UkePipe): Builder {
-            pipe.connect(pipe)
+            adapter.pipe.connect(pipe)
             return this
         }
 
