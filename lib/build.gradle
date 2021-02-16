@@ -9,10 +9,10 @@ android {
     buildToolsVersion "29.0.0"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 29
-        versionCode 105
-        versionName "1.0.5"
+        versionCode 108
+        versionName "1.0.8"
     }
 
     buildTypes {
@@ -50,7 +50,7 @@ publish {
     userOrg = 'cooperbakker'
     groupId = 'com.cooper.center'
     artifactId = 'ukeadapter'
-    publishVersion = '1.0.5'
+    publishVersion = '1.0.8'
     desc = 'UkeAdapter for Android RecyclerView'
     website = 'https://github.com/TaeeunJang/ukeadapter'
     issueTracker = "${website}/issues"

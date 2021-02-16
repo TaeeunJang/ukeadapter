@@ -79,6 +79,11 @@ class UkeAdapter : RecyclerView.Adapter<UkeHolder>(), MutableList<Any> {
             return this
         }
 
+        fun event(event: UkeEvent): Builder {
+            adapter.event = event
+            return this
+        }
+
         fun connect(pipe: UkePipe): Builder {
             adapter.pipe.connect(pipe)
             return this
@@ -87,14 +92,13 @@ class UkeAdapter : RecyclerView.Adapter<UkeHolder>(), MutableList<Any> {
         fun build(): UkeAdapter {
             return adapter
         }
-
     }
 
     /** Member Variables **/
     private val objects: ArrayList<Any> = ArrayList()
     private val viewTypes: ArrayList<Int> = ArrayList()
     private var presenters: ArrayList<UkePresenter<Any>> = ArrayList()
-    private val event: UkeEvent = UkeEvent(this)
+    private var event: UkeEvent = UkeEvent(this)
     private val pipe: UkePipe = UkePipe()
 
     /** RecyclerView.Adapter<UkeHolder> **/
